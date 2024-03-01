@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body { /* no scroll */
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  background-color: black;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed; /* no scroll */
+  height: 100vh;
   min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  height: 100vh;
+  animation: gradientAnimation 15s ease infinite; /* Animation length */
+  background-size: 200% 200%;
+}
+
+.App { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+}
+
+.navbar {
+  /* Use media queries to adjust height */
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100vw;
+  height: px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.navbar button {
+  border: none; /* Removes default button border */
+  background: none; /* Removes default button background */
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+}
+
+.profile-button img {
+  width: 30px;
+  height: auto;
+}
+
+.file-button img{
+  width: 20px;
+  height: auto;
+}
+
+
+/* Profile Pop-up */
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px; /* Adjust based on the height of your navbar */
+  right: 20px; /* Adjust based on desired right spacing */
+  width: 100px; /* Adjust size as needed */
+  height: 200px;
+  overflow-y: auto;
+  background-color: pink;
+  border: 1.5px solid rgb(235, 106, 153);
+  border-radius: 0px; /* Square edges */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 50; /* Ensure it's above other content */
+}
+
+.modal p {
+  font-size: 9px;
+  font-family: 'Chakra Petch', sans-serif; /* Add sans-serif as a fallback */
+}
+
+
+.profile-images {
+  padding: 2px;
+  margin-top: 10px;
+}
+
+.x-button {
+  position: absolute;
+  top: 5px; /* Minimal padding from the top */
+  right: 5px; /* Minimal padding from the right */
+  border: 1.5px solid rgb(235, 106, 153);
+  color: rgb(235, 106, 153);
+  background: white;
+  cursor: pointer;
+  /* Additional styles for the close button */
+}
+
+.switch-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px; /* Adjust total width as needed */
+  margin: 0 auto;
+}
+
+.left-button, .right-button {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.left-button img, .right-button img {
+  width: 30px;
+  height: auto;
+  outline: none;
+}
+
+.close-button {
+  font-family: 'Chakra Petch', sans-serif;
+  border: 1.5px solid rgb(235, 106, 153);
+  color: rgb(235, 106, 153);
+  background: white;
+  cursor: pointer;
+  /* Additional styles for the close button */
+}
+
+/* InputBar & Enter*/
+.input-container {
+  /* Removed absolute positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.text-input, .enter-button {
+  box-sizing: border-box; /* Include padding and borders in the element's total height */
+  height: 36px; /* Updated to a more reasonable height */
+  padding: 8px; /* Adjust padding as needed */
+  border: 1.5px solid black;
+  border-radius: 0px;
+  margin-right: 10px; /* Only needed on the input */
+}
+
+/* Normal state with black border */
+.text-input {
+  box-sizing: border-box;
+  height: 36px;
+  padding: 8px;
+  border: 1.5px solid black; /* Black border */
+  border-radius: 0px; /* Square edges */
+  width: 50vw;
+  outline: none; /* Remove default browser outline */
+}
+
+/* Input focus state with pink border */
+.text-input:focus{
+  border-color: pink; /* Pink border on focus */
+}
+ /* Button active state with pink border*/
+.enter-button:active {
+  border-color: pink; /* Pink border only when actively clicked */
+}
+
+.enter-button {
+  padding: 8px 12px; /* Adjust button padding to vertically center the text */
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  cursor: pointer;
+  /* Removed the height property since it's now set together with the input */
+}
+
+/* Set Font */
+.text-input {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 300; /* Light */
+}
+
+.enter-button {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: normal; /* Regular */
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Chakra Petch';
+  src: local('Chakra Petch'), url('./fonts/Chakra_Petch/ChakraPetch-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  src: local('Chakra Petch'), url('./fonts/Chakra_Petch/ChakraPetch-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  src: local('Chakra Petch'), url('./fonts/Chakra_Petch/ChakraPetch-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Set icon size */
+.QuickLinks a img, .QuickLinks button img{
+  width: 50px;
+  height: auto;
+  margin: 10px;
+}
+
+/* Turn of dragging permissions on img */
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+.QuickLinks button {
+  background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  padding: 0; /* Remove default padding */
+  cursor: pointer; /* Optional: Change cursor on hover */
+}
+.QuickLinks {
+  margin-top: 20px;
+}
+
+/* Set title size */
+.Title img {
+  width: 50vw; /* 50% of the viewport width */
+  height: auto; /* maintain aspect ratio */
+  margin: 10px auto; /* center the image horizontally */
+  display: block; /* make the image a block-level element */
+}
+
+.home-contents {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  height: 50vh;
+  padding-top: 50vh;
+  box-sizing: border-box;
 }
