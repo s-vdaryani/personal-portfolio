@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/personal-portfolio/static/css/main.68a90dff.chunk.css",
+    "main.js": "/personal-portfolio/static/js/main.3df78b3c.chunk.js",
+    "main.js.map": "/personal-portfolio/static/js/main.3df78b3c.chunk.js.map",
+    "runtime~main.js": "/personal-portfolio/static/js/runtime~main.f7084bd3.js",
+    "runtime~main.js.map": "/personal-portfolio/static/js/runtime~main.f7084bd3.js.map",
+    "static/js/2.a2b181a3.chunk.js": "/personal-portfolio/static/js/2.a2b181a3.chunk.js",
+    "static/js/2.a2b181a3.chunk.js.map": "/personal-portfolio/static/js/2.a2b181a3.chunk.js.map",
+    "static/js/3.a29efab2.chunk.js": "/personal-portfolio/static/js/3.a29efab2.chunk.js",
+    "static/js/3.a29efab2.chunk.js.map": "/personal-portfolio/static/js/3.a29efab2.chunk.js.map",
+    "index.html": "/personal-portfolio/index.html",
+    "precache-manifest.24e92fdbc88258d7078d9360b79cc3aa.js": "/personal-portfolio/precache-manifest.24e92fdbc88258d7078d9360b79cc3aa.js",
+    "service-worker.js": "/personal-portfolio/service-worker.js",
+    "static/css/main.68a90dff.chunk.css.map": "/personal-portfolio/static/css/main.68a90dff.chunk.css.map",
+    "static/media/App.css": "/personal-portfolio/static/media/ChakraPetch-Regular.12c7b5f8.ttf",
+    "static/media/logo.svg": "/personal-portfolio/static/media/logo.06e73328.svg"
+  }
+}
